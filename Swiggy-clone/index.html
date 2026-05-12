@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/swiggy.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <header class="header" id="header">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="">
+        </a>
+    </div>
+
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-btns">
+
+        <a href="cart.html" class="cart">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <sup id="cartCount">0</sup>
+        </a>
+
+        <button class="login-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Order Food <br>Anytime & Anywhere </h1>
+        <p>
+            Discover the best restaurants and delicious food delivered to your doorstep in minutes.
+        </p>
+
+        <div class="hero-buttons">
+<a href="restaurant.html">
+    <button class="order-btn">Order Now</button>
+</a>
+<a href="#popularFood">
+    <button class="menu-btn">View Menu</button>
+</a>
+    </div>
+</section>
+
+<section class="popular-food" id="popularFood">
+
+    <div class="section-title">
+        <h2>Popular Food Categories</h2>
+        <p>
+            Explore your favourite food categories and order instantly
+        </p>
+    </div>
+
+    <div class="food-slider">
+        <button class="slide-btn prev" onclick="slideLeft()">
+            &#10094;
+        </button>
+        <div class="food-container" id="foodContainer">
+        <div class="food-card" onclick="openCategory('pizza')">
+    <img src="images/pizza.jpg">
+    <h3>Pizza</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('burger')">
+    <img src="images/burger.jpg">
+    <h3>Burger</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('biryani')">
+    <img src="images/biryani.jpg">
+    <h3>Biryani</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('pasta')">
+    <img src="images/pasta.jpg">
+    <h3>Pasta</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('cake')">
+    <img src="images/cake.jpg">
+    <h3>Cakes</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('ice cream')">
+    <img src="images/icecream.jpg">
+    <h3>Ice Cream</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('momo')">
+    <img src="images/momo.jpg">
+    <h3>Momo</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('paneer')">
+    <img src="images/paneer.jpg">
+    <h3>Paneer</h3>
+</div>
+
+<div class="food-card" onclick="openCategory('paneer')">
+    <img src="images/sandwich.jpg">
+    <h3>Paneer</h3>
+</div>
+
+        </div>
+
+        <button class="slide-btn next" onclick="slideRight()">
+            &#10095;
+        </button>
+    </div>
+</section>
+
+<section class="restaurants">
+    <div class="section-title">
+        <h2>Top Restaurants Near You</h2>
+        <p>Discover trending restaurants with best offers</p>
+    </div>
+
+    <div class="restaurant-container" id="homeRestaurantContainer"></div>
+
+    <div class="btn-all">
+        <a href="restaurant.html">
+            <button class="view-btn">VIEW ALL→</button>
+        </a>
+    </div>
+</section>
+
+<section class="trending-dishes">
+
+    <div class="section-title">
+        <h2>Trending Dishes</h2>
+        <p>Most loved food items ordered by customers</p>
+    </div>
+
+    <div class="dish-container">
+
+        <div class="dish-card">
+            <img src="images/pizza3.jpg">
+            <h3>Cheese Pizza</h3>
+            <p>Hot cheesy pizza with extra toppings</p>
+            <div class="dish-bottom">
+                <span>₹299</span>
+            </div>
+        </div>
+
+        <div class="dish-card">
+            <img src="images/burger3.jpg">
+            <h3>Classic Burger</h3>
+            <p>Loaded burger with crispy fries</p>
+            <div class="dish-bottom">
+                <span>₹199</span>
+            </div>
+        </div>
+
+        <div class="dish-card">
+            <img src="images/biryani3.jpg">
+            <h3>Chicken Biryani</h3>
+            <p>Spicy biryani with rich flavours</p>
+            <div class="dish-bottom">
+                <span>₹249</span>
+            </div>
+        </div>
+
+        <div class="dish-card">
+            <img src="images/noodles2.jpg">
+            <h3>Veg Noodles</h3>
+            <p>Street style spicy noodles</p>
+            <div class="dish-bottom">
+                <span>₹149</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="offer-banner">
+    <div class="offer-content">
+        <h2>Get Free Delivery On First Order </h2>
+        <p>
+            Use code <span>SWIGGY50</span> and get exciting discounts on your favourite meals.
+        </p>
+
+        <a href="restaurant.html"><button>Order Now</button></a>
+    </div>
+</section>
+
+<div class="cart-popup" id="cartPopup">
+    <div class="cart-popup-box">
+        <h2>Item Added</h2>
+        <p id="cartPopupText">Food added to your cart</p>
+
+        <div class="cart-popup-buttons">
+            <button onclick="closeCartPopup()">Continue</button>
+            <a href="cart.html">Go To Cart</a>
+        </div>
+    </div>
+</div>
+
+<section class="customer-review">
+
+    <div class="section-title">
+        <h2>What Our Customers Say</h2>
+        <p>Real reviews from happy food lovers</p>
+    </div>
+
+    <div class="review-container">
+
+        <div class="review-card">
+
+            <div class="review-top">
+                <img src="images/customer1.jpg">
+
+                <div>
+                    <h3>Aditi Sharma</h3>
+                    <span>Food Blogger</span>
+                </div>
+            </div>
+
+            <p class="review-text">
+                Amazing food quality and super fast delivery. The interface looks premium and ordering is very smooth.
+            </p>
+
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="review-top">
+                <img src="images/customer2.jpg">
+
+                <div>
+                    <h3>Rahul Verma</h3>
+                    <span>Developer</span>
+                </div>
+            </div>
+
+            <p class="review-text">
+                Best restaurant collection and very attractive design. Food arrived hot and fresh every time.
+            </p>
+
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="review-top">
+                <img src="images/customer3.jpg">
+
+                <div>
+                    <h3>Priya Kapoor</h3>
+                    <span>Designer</span>
+                </div>
+            </div>
+
+            <p class="review-text">
+                Loved the offers and smooth user experience. This feels like a real modern food delivery platform.
+            </p>
+
+            <div class="review-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="images/logo.png" alt="">
+            <p>
+                Delicious food delivered fast at your doorstep with premium restaurants and exciting offers.
+            </p>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurant.html">Restaurants</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Burger</a></li>
+                <li><a href="#">Biryani</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Chinese</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: support@swiggy.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: New Delhi, India</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Swiggy Clone. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
