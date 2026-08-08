@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/swiggy.png" type="image/png">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<title>Cart | Swiggy Clone</title>
+
+<link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+<section class="cart-section">
+    <h2>Your Cart</h2>
+
+    <div id="cartContainer"></div>
+    <div class="cart-total">
+        <h3>Total: <span id="totalPrice">₹0</span></h3>
+        <button onclick="openPaymentPopup()">
+    Place Order
+</button>
+    </div>
+
+    <div class="payment-popup" id="paymentPopup">
+    <div class="payment-container">
+
+        <h2>Select Payment Method</h2>
+
+        <div class="payment-options">
+            <label class="pay-card">
+                <input type="radio" name="payment" value="UPI" checked>
+                <span>UPI Payment</span>
+            </label>
+
+            <label class="pay-card">
+                <input type="radio" name="payment" value="Card">
+                <span>Debit / Credit Card</span>
+            </label>
+
+            <label class="pay-card">
+                <input type="radio" name="payment" value="COD">
+                <span>Cash On Delivery</span>
+            </label>
+        </div>
+
+        <button class="pay-btn" onclick="makePayment()">
+            Pay Now
+        </button>
+
+    </div>
+</div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
