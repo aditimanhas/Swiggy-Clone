@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/swiggy.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <header class="header" id="header">
+    <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search food...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <div class="header-btns">
+            <a href="cart.html" class="cart">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+
+        <sup id="cartCount">0</sup>
+    </a>
+        <button class="login-btn" onclick="logout()">
+            Logout
+        </button>
+    </div>
+
+</header>
+
+<section class="restaurants">
+
+    <div class="section-title">
+        <h2>Top Restaurants Near You</h2>
+        <p>Discover trending restaurants with best offers</p>
+    </div>
+
+    <div class="restaurant-container" id="restaurantContainer"></div>
+
+    <div class="btn-all">
+        <a href="index.html">
+            <button class="view-btn">GO BACK→</button>
+        </a>
+    </div>
+
+</section>
+
+<div class="cart-popup" id="cartPopup">
+    <div class="cart-popup-box">
+        <h2>Item Added</h2>
+        <p id="cartPopupText">Food added to your cart</p>
+
+        <div class="cart-popup-buttons">
+            <button onclick="closeCartPopup()">Continue</button>
+            <a href="cart.html">Go To Cart</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <img src="images/logo.png" alt="">
+            <p>
+                Delicious food delivered fast at your doorstep with premium restaurants and exciting offers.
+            </p>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurant.html">Restaurants</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Burger</a></li>
+                <li><a href="#">Biryani</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Chinese</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>Email: support@swiggy.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: New Delhi, India</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Swiggy Clone. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
